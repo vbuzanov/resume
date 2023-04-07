@@ -1,0 +1,89 @@
+<div>
+    <main>
+        {{#with program}}
+        <div>
+            <section>
+                {{#with excursion}}
+                <h1>{{name}}</h1>
+
+                <address>{{location.city}}, {{location.country}}, <em>{{date}}</em></address>
+            </section>
+            <hr>
+            <section>
+                {{>title data='Programs:'}}
+                <ul>
+                    {{#each program}}
+                    <li>
+                        <h4>{{name}}</h4>
+                        <p>type: {{type}}</p>
+                        <p>duration: {{duration}}</p>
+                        <hr>
+                        {{#with details}}
+                        {{#if museum}}
+                        <section>
+                            {{#with museum}}
+                            <p><strong>Museum:</strong> {{name}}</p>
+                            {{#with location}}
+                            <address>{{address}}, {{city}}, {{country}}</address>
+                            {{/with}}
+                            <section>
+                                <h5><big>Exhibits:</big> </h5>
+                                <ul>
+                                    {{#each exhibits}}
+                                    <li>
+                                        <strong>{{name}}</strong>
+                                        {{#if artist}}
+                                        <p>artist: {{artist}}</p>
+                                        {{/if}}
+                                        <p>description: {{description}}</p>
+                                        {{#if audio_guide}}
+                                        <p><i>audio guide</i></p>
+                                        {{/if}}
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                            </section>
+                            {{/with}}
+                        </section>
+                        {{/if}}
+                        {{#if venue}}
+                        <section>
+                            {{#with venue}}
+                            <p><strong>Venue:</strong> {{name}}</p>
+                            {{#with location}}
+                            <address>{{address}}, {{city}}, {{country}}</address>
+                            {{/with}}
+                            {{/with}}
+                        </section>
+                        {{/if}}
+
+                        {{#if performers}}
+                        <section>
+                            <h5><big>Performers:</big> </h5>
+                            <ul>
+                                {{#each performers}}
+                                <li>
+                                    <strong>{{name}}</strong>
+                                    <p>type: {{type}}</p>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </section>
+                        {{/if}}
+                        <section>
+                            {{#with guide}}
+                            <p><strong>Guide: </strong>{{name}}, language: {{language}}, rating: {{rating}}</p>
+                            {{/with}}
+                        </section>
+                        {{/with}}
+                    </li>
+                    <hr>
+                    {{/each}}
+                </ul>
+                <br>
+            </section>
+            {{/with}}
+        </div>
+        {{/with}}
+    </main>
+</div>
