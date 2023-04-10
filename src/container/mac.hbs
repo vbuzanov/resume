@@ -1,0 +1,204 @@
+<div>
+    <main>
+        <div>
+            <h1>{{name}}</h1>
+
+            <a class="icon-link" href="#">
+                {{category}}
+                <svg class="bi" aria-hidden="true">
+                    <use xlink:href="#arrow-right"></use>
+                </svg>
+            </a> <strong>{{price}} $</strong>
+
+            <hr>
+            <p>{{description}}</p>
+            <br>
+            <div>
+                {{#with features}}
+                <h2>Features</h2>
+                <br>
+                <section>
+                    {{#with processor}}
+                    <h3>Processor</h3>
+                    <ul>
+                        <li>
+                            brand: <span class="badge rounded-pill text-bg-primary">{{brand}}</span>
+                        </li>
+                        <li>
+                            model: <span class="badge rounded-pill text-bg-primary">{{model}}</span>
+                        </li>
+                        <li>
+                            speed: <span class="badge rounded-pill text-bg-primary">{{speed}}</span>
+                        </li>
+                        <li>
+                            cores: <span class="badge rounded-pill text-bg-primary">{{cores}}</span>
+                        </li>
+                        <li>
+                            cache: <span class="badge rounded-pill text-bg-primary">{{cache}}</span>
+                        </li>
+                    </ul>
+                    {{/with}}
+                </section>
+
+                <section>
+                    {{#with memory}}
+                    <h3>Memory</h3>
+                    <ul>
+                        <li>
+                            type: <span class="badge rounded-pill text-bg-secondary">{{type}}</span>
+                        </li>
+                        <li>
+                            size: <span class="badge rounded-pill text-bg-secondary">{{size}}</span>
+                        </li>
+                        <li>
+                            speed: <span class="badge rounded-pill text-bg-secondary">{{speed}}</span>
+                        </li>
+                    </ul>
+                    {{/with}}
+                </section>
+
+                <section>
+                    {{#with storage}}
+                    <h3>Storage</h3>
+                    <ul>
+                        <li>
+                            type: <span class="badge rounded-pill text-bg-success">{{type}}</span>
+                        </li>
+                        <li>
+                            size: <span class="badge rounded-pill text-bg-success">{{size}}</span>
+                        </li>
+                    </ul>
+                    {{/with}}
+                </section>
+
+                <section>
+                    {{#with display}}
+                    <h3>Display</h3>
+                    <ul>
+                        <li>
+                            size: <span class="badge rounded-pill text-bg-danger">{{size}}</span>
+                        </li>
+                        <li>
+                            resolution: <span class="badge rounded-pill text-bg-danger">{{resolution}}</span>
+                        </li>
+                        <li>
+                            technology: <span class="badge rounded-pill text-bg-danger">{{technology}}</span>
+                        </li>
+                        <li>
+                            color_space: <span class="badge rounded-pill text-bg-danger">{{color_space}}</span>
+                        </li>
+                        <li>
+                            brightness: <span class="badge rounded-pill text-bg-danger">{{brightness}}</span>
+                        </li>
+                        <li>
+                            refresh_rate: <span class="badge rounded-pill text-bg-danger">{{refresh_rate}}</span>
+                        </li>
+                    </ul>
+                    {{/with}}
+                </section>
+
+                <section>
+                    {{#with graphics}}
+                    <h3>Graphics</h3>
+                    <ul>
+                        <li>
+                            brand: <span class="badge rounded-pill text-bg-warning">{{brand}}</span>
+                        </li>
+                        <li>
+                            model: <span class="badge rounded-pill text-bg-warning">{{model}}</span>
+                        </li>
+                        <li>
+                            memory: <span class="badge rounded-pill text-bg-warning">{{memory}}</span>
+                        </li>
+                    </ul>
+                    {{/with}}
+                </section>
+
+                <section>
+                    <h3>Ports</h3>
+                    {{#each ports}}
+                    <ul>
+                        <li>
+                            <p><span class="badge rounded-pill text-bg-info">{{type}}</span></p>
+                            <p>count: <span class="badge rounded-pill text-bg-light">{{count}}</span></p>
+                            {{#if features}}
+                            <h5>features</h5>
+                            <ul>
+                                {{#each features}}
+                                <li>
+                                    <span class="badge rounded-pill text-bg-success">{{this}}</span>
+                                </li>
+                                {{/each}}
+                            </ul>
+                            {{/if}}
+                        </li>
+                    </ul>
+                    {{/each}}
+                </section>
+
+                <section>
+                    {{#with battery}}
+                    <h3>Battery</h3>
+                    <ul>
+                        <li>
+                            type: <span class="badge rounded-pill text-bg-dark">{{type}}</span>
+                        </li>
+                        <li>
+                            capacity: <span class="badge rounded-pill text-bg-dark">{{capacity}}</span>
+                        </li>
+                        <li>
+                            life: <span class="badge rounded-pill text-bg-dark">{{life}}</span>
+                        </li>
+                    </ul>
+                    {{/with}}
+                </section>
+
+                <section>
+                    <h3>Weight: <span class="badge rounded-pill text-bg-primary">{{weight}}</h3>
+                </section>
+
+                <section>
+                    {{#with dimensions}}
+                    <h3>Dimensions</h3>
+                    <ul>
+                        <li>
+                            height: <span class="badge rounded-pill text-bg-secondary">{{height}}</span>
+                        </li>
+                        <li>
+                            width: <span class="badge rounded-pill text-bg-secondary">{{width}}</span>
+                        </li>
+                        <li>
+                            depth: <span class="badge rounded-pill text-bg-secondary">{{depth}}</span>
+                        </li>
+                    </ul>
+                    {{/with}}
+                </section>
+
+                <section>
+                    <h3>Operating_system: <span class="badge rounded-pill text-bg-success">{{operating_system}}</h3>
+                </section>
+
+                <section>
+                    <h3>Accessories</h3>
+                    {{#each accessories}}
+                    <ul>
+                        <li>
+                            <p><a class="link-opacity-10-hover" href="#">{{name}}</a></p>
+                            <p><span class="badge rounded-pill text-bg-light">{{price}} $</span></p>
+
+                        </li>
+                    </ul>
+                    {{/each}}
+                </section>
+
+                {{/with}}
+            </div>
+
+
+        </div>
+
+
+
+
+    </main>
+</div>
