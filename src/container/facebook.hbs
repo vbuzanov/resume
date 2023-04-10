@@ -1,0 +1,102 @@
+<div>
+    <main>
+        <div>
+            <h1>{{name}}</h1>
+            <br>
+            <hr>
+            <div>
+                <h2>Users</h2>
+                <ul>
+                    {{#each users}}
+                    <li>
+                        <h2><a class="link-opacity-10-hover" href="#">{{name}}</a></h2>
+                        <p>age: {{age}}, gender: {{gender}}, id: {{id}}</p>
+                        <section>
+                            <h3>Friends:</h3>
+                            <ul>
+                                {{#each friends}}
+                                <li>
+                                    <h4><a class="link-opacity-10-hover" href="#">{{name}}</a></h4>
+                                    <p>age: {{age}}, gender: {{gender}}, id: {{id}}</p>
+
+                                    <section>
+                                        <h4>Mutual friends:</h4>
+                                        <ul>
+                                            {{#each mutual_friends}}
+                                            <li>
+                                                <h5><a class="link-opacity-10-hover" href="#">{{name}}</a></h5>
+                                                <p>age: {{age}}, gender: {{gender}}, id: {{id}}</p>
+                                                {{#if mutual_friends}}
+                                                <h5>Mutual friends:</h5>
+                                                <ul>
+                                                    {{#each mutual_friends}}
+                                                    <li>
+                                                        <h6><a class="link-opacity-10-hover" href="#">{{name}}</a></h6>
+                                                        <p>age: {{age}}, gender: {{gender}}, id: {{id}}</p>
+                                                    </li>
+                                                    {{/each}}
+                                                </ul>
+                                                {{/if}}
+                                            </li>
+                                            {{/each}}
+                                        </ul>
+                                    </section>
+                                    {{#if groups}}
+                                    <h4>Groups:</h4>
+                                    <ul>
+                                        {{#each groups}}
+                                        <li>
+                                            <h5><a class="link-opacity-10-hover" href="#">{{name}}</a></h5>
+                                            <p>id: {{id}}</p>
+                                            <p>{{description}}</p>
+                                            <h5>Members</h5>
+                                            <ul>
+                                                {{#each members}}
+                                                <li>
+                                                    <h6><a class="link-opacity-10-hover" href="#">{{name}}</a></h6>
+                                                    <p>age: {{age}}, gender: {{gender}}, id: {{id}}</p>
+                                                </li>
+                                                {{/each}}
+                                            </ul>
+                                        </li>
+                                        {{/each}}
+                                    </ul>
+
+                                    {{/if}}
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </section>
+                        {{#if groups}}
+                        <section>
+                            <h3>Groups:</h3>
+                            <ul>
+                                {{#each groups}}
+                                <li>
+                                    <h4><a class="link-opacity-10-hover" href="#">{{name}}</a></h4>
+                                    <p>id: {{id}}</p>
+                                    <p>{{description}}</p>
+                                    <h4>Members</h4>
+                                    <ul>
+                                        {{#each members}}
+                                        <li>
+                                            <h5><a class="link-opacity-10-hover" href="#">{{name}}</a></h5>
+                                            <p>age: {{age}}, gender: {{gender}}, id: {{id}}</p>
+                                        </li>
+                                        {{/each}}
+                                    </ul>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </section>
+                        {{/if}}
+                    </li>
+
+                    {{/each}}
+                </ul>
+            </div>
+
+        </div>
+
+    </main>
+</div>
