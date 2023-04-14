@@ -1,0 +1,125 @@
+<main class='p-2'>
+  <div class='row'>
+
+
+    <div class='col-12 mt-4'>
+      <ol class='breadcrumb'>
+        {{#each breadcrumb}}
+        <li class='breadcrumb-item'>
+          {{#if @last}}
+          {{name}}
+          {{else}}
+          <a href='{{url}}'>{{name}} </a>
+          {{/if}}
+        </li>
+        {{/each}}
+      </ol>
+    </div>
+
+
+    {{#with productData}}
+    <div class="col-7 my-5 pe-5">
+      <div class="col-12 mb-3">
+        <img src="{{img}}" alt="">
+      </div>
+      {{#with info}}
+      <div class="col-12">
+
+        <div class='card'>
+          <div class='card-body'>
+            <h5 class='card-title'>{{title}} </h5>
+            <p>{{about}}</p>
+            <div class="display-6 fw-semibold">{{price}}</div>
+            <div>
+              {{#each category}}
+              {{#if isHot}}
+              <span class='badge text-bg-warning rounded-pill fw-normal text-light'>{{name}}</span>
+              {{/if}}
+              {{#if isNew}}
+              <span class='badge text-bg-primary rounded-pill fw-normal text-light'>{{name}}</span>
+              {{/if}}
+              {{#if isBonus}}
+              <span class='badge text-bg-info rounded-pill fw-normal text-light'>{{name}}</span>
+              {{/if}}
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/with}}
+    </div>
+
+    <div class="col-5 mt-5 ">
+      {{#with item}}
+      <table class='table table-bordered text-center'>
+        <thead>
+          <tr>
+            {{#each head}}
+            <th>{{this}}</th>
+            {{/each}}
+          </tr>
+        </thead>
+        <tbody>
+          {{#each body}}
+          <tr>
+            {{#each this}}
+            <td>{{this}}</td>
+            {{/each}}
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      {{/with}}
+
+      {{#with param}}
+      <div class='card'>
+        <div class='card-header'>{{title}}</div>
+        <ul class='list-group list-group-flush'>
+          {{#each list}}
+          <li class='list-group-item'>
+            <p class="m-0">{{this}}</p>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+      {{/with}}
+
+      {{#with alert}}
+      {{#if isError}}
+      <div class='alert alert-danger  mt-3'>
+        <p class='m-0'>{{text}}</p>
+      </div>
+      {{/if}}
+      {{/with}}
+
+    </div>
+
+    <div class='col-12 mt-2'>
+      <div class="card">
+        <div class='card-body'>
+          {{#each actionList}}
+          <button
+            class='btn {{#if isWarning}}btn-warning text-light{{/if}} {{#if isError}}btn-outline-danger{{/if}} {{#if isSuccess}} btn-success{{/if}} {{#if isGood}}btn-outline-success{{/if}} me-3'>{{name}}</button>
+          {{/each}}
+        </div>
+      </div>
+
+    </div>
+    {{/with}}
+
+    {{#with goodsOtherBlock}}
+    <div class='col-12 my-5'>
+      <h2 class="text-center pb-3">{{title}}</h2>
+      <div class="row">
+
+        {{> shopcard cards=cards }}
+
+      </div>
+    </div>
+    {{/with}}
+
+    {{> shopaction service=service }}
+
+  </div>
+
+</main>

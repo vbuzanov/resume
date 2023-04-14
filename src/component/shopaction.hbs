@@ -1,0 +1,16 @@
+{{#with service}}
+<div class='col-12 my-5 text-bg-success'>
+    <div class="row text-center">
+        <h2 class="col-12 py-2">{{title}}</h2>
+        <p>{{description}}</p>
+
+        <div class="col-12">
+            {{#each buttons}}
+            <div class='mb-3'>
+                <a href='{{link}}' class='btn btn-primary' rel="{{rel}}">{{text}}</a>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+{{/with}}
