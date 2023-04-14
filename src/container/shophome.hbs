@@ -122,7 +122,7 @@
           <div class='nav flex-column'>
             {{#each this}}
             <div class='nav-item mb-3'>
-              <a href='{{link}}' class='nav-link'>{{text}}</a>
+              <a href='{{link}}' class='nav-link {{#if @last }}disabled{{/if}}'>{{text}}</a>
             </div>
             {{/each}}
           </div>
