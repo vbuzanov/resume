@@ -1,0 +1,15 @@
+<div class='col-12 my-5  pt-3'>
+    <div class="row">
+        {{#each footer}}
+        <div class='col-2'>
+            <div class='nav flex-column'>
+                {{#each this}}
+                <div class='nav-item mb-3'>
+                    <a href='{{link}}' class='nav-link {{#if @last }}disabled{{/if}}'>{{text}}</a>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

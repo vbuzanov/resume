@@ -1,0 +1,54 @@
+<main class='p-2'>
+  <div class='row'>
+
+
+    {{> breadcrumb breadcrumb=breadcrumb }}
+
+
+    {{#with newsData}}
+    <div class='col-12 my-5'>
+
+      <div class="col-12 mt-3">
+        <img class="img-fluid" width="100%" src="{{photo}}" alt="">
+      </div>
+
+      {{#with head}}
+      <div class="col-12 my-5">
+        <h2>{{heading}}</h2>
+        <p>{{description}}</p>
+      </div>
+      {{/with}}
+
+
+      <div class="col-12 my-5">
+        {{#each body}}
+
+        <h3>{{title}}</h3>
+        <p>{{text}}</p>
+
+        {{/each}}
+      </div>
+
+    </div>
+    {{/with}}
+
+
+
+
+    {{#with newsOtherBlock}}
+    <div class='col-12 my-5'>
+      <h2 class="text-center pb-3">{{title}}</h2>
+      <div class="row">
+
+        {{> shoppost cards=cards }}
+
+      </div>
+    </div>
+    {{/with}}
+
+    {{> shopaction service=service }}
+
+
+  </div>
+
+</main>
