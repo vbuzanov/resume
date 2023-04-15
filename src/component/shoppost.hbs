@@ -1,0 +1,16 @@
+<div class='card  text-bg-dark'>
+    <div class='card-header'>
+        <h6>{{title}}
+            {{#if idNew}}
+            <span class='badge text-bg-success rounded-pill fw-normal'>New</span>
+            {{/if}}
+            {{#if isTop}}
+            <span class='badge text-bg-danger rounded-pill fw-normal'>Top</span>
+            {{/if}}
+        </h6>
+    </div>
+    <div class='card-body'>
+
+        <p>{{description}}</p>
+    </div>
+</div>
