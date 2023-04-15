@@ -1,22 +1,16 @@
-<div class="row my-3">
-    {{#each cards}}
-    <div class="col-3 mb-3">
-        <div class='card  text-bg-dark'>
-            <div class='card-header'>
-                <h6>{{title}}
-                    {{#if isNew}}
-                    <span class='badge text-bg-success rounded-pill fw-normal'>New</span>
-                    {{/if}}
-                    {{#if isTop}}
-                    <span class='badge text-bg-danger rounded-pill fw-normal'>Top</span>
-                    {{/if}}
-                </h6>
-            </div>
-            <div class='card-body'>
-
-                <p>{{description}}</p>
-            </div>
-        </div>
+<div class='card  text-bg-dark'>
+    <div class='card-header'>
+        <h6>{{title}}
+            {{#if idNew}}
+            <span class='badge text-bg-success rounded-pill fw-normal'>New</span>
+            {{/if}}
+            {{#if isTop}}
+            <span class='badge text-bg-danger rounded-pill fw-normal'>Top</span>
+            {{/if}}
+        </h6>
     </div>
-    {{/each}}
+    <div class='card-body'>
+
+        <p>{{description}}</p>
+    </div>
 </div>

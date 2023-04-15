@@ -18,7 +18,9 @@
 
 <body class="p-5">
 
-	{{> shopheader navigation=navigation }}
+	{{#with navigation}}
+	{{> shopheader links=links }}
+	{{/with}}
 
 	{{! ↓ ця кострукція показує куди шаблонізатору треба вставляти код з container файлу --}}
 	{{{body}}}
