@@ -111,14 +111,26 @@
     <div class='col-12 my-5'>
       <h2 class="text-center pb-3">{{title}}</h2>
       <div class="row">
+        {{#each cards}}
+        <div class="col-4 mb-3">
 
-        {{> shopcard cards=cards }}
+          {{> shopcard image=image title=title description=description isHot=isHot idNew=idNew}}
 
+        </div>
+        {{/each}}
       </div>
     </div>
     {{/with}}
 
-    {{> shopaction service=service }}
+    {{#with service}}
+    <div class='col-12 my-5 text-bg-success'>
+
+      {{> shopaction title=title description=description buttons=buttons}}
+
+    </div>
+    {{/with}}
+
+
 
   </div>
 
