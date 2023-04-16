@@ -2,19 +2,7 @@
   <div class='row'>
 
 
-    <div class='col-12 mt-4'>
-      <ol class='breadcrumb'>
-        {{#each breadcrumb}}
-        <li class='breadcrumb-item'>
-          {{#if @last}}
-          {{name}}
-          {{else}}
-          <a href='{{url}}'>{{name}} </a>
-          {{/if}}
-        </li>
-        {{/each}}
-      </ol>
-    </div>
+    {{> breadcrumb breadcrumb=breadcrumb }}
 
 
     {{#with productData}}

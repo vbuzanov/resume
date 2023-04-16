@@ -4,15 +4,14 @@
             <h1>{{name}}</h1>
             <p>{{birthdate}} - {{deathdate}}</p>
             <hr>
-            <br>
-            <br>
-            <address>Birthplace: {{birthplace}}</address>
-            <br>
+
+            <address class="mt-5">Birthplace: {{birthplace}}</address>
+
             <address>Deathplace: {{deathplace}}</address>
             <p>Nationality: {{nationality}}</p>
             <p>Occupation: {{occupation}}</p>
             <br>
-            {{>title data='Known for:'}}
+            {{> title data='Known for:' }}
             <ul>
                 {{#each known_for}}
                 <li>
