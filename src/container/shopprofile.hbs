@@ -113,19 +113,19 @@
           {{#with contacts}}
           <h3 class="mb-4 col-12">{{title}}</h3>
           {{#each contactData}}
-          <div class="col-4">
-            <div class='card  '>
+          <div class="col-4 ">
+            <div class='card  border-bottom-0 rounded-bottom-0'>
               <div class='card-body px-2'>
                 <p class="mb-1">{{title}}</p>
-                <p><b>{{value}}</b></p>
+                <p class="mb-0"><b>{{value}}</b></p>
               </div>
             </div>
           </div>
           {{/each}}
 
           {{#each buttons}}
-          <div class="col-4">
-            <div>
+          <div class="col-4 border-top-0 ">
+            <div class="card border border-top-0 rounded-top-0">
               <div class='card-body px-2'>
                 <a href="{{link}}"
                   class='btn {{#if isPrimary}}btn-primary{{/if}} {{#if isSecondary}}btn-outline-secondary{{/if}} {{#if isDanger}}btn-outline-danger{{/if}} me-2'>{{text}}</a>
