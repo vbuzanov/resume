@@ -2,44 +2,42 @@
   <div class='card-body'>
     <div class='card'>
       {{#with title}}
-      <div class='card-header bg-white '>
-        <h5 class='mb-0'>{{userName}}</h5>
-        <p class='mb-1'><small>{{caption}}</small></p>
-        <p class='mb-0'>{{date}}</p>
-      </div>
+        <div class='card-header bg-white '>
+          <h5 class='mb-0'>{{userName}}</h5>
+          <p class='mb-1'><small>{{caption}}</small></p>
+          <p class='mb-0'>{{date}}</p>
+        </div>
       {{/with}}
       {{#with reviewBody}}
-      <div class='card-body'>
-        <p>{{seller.title}}: {{seller.value}}</p>
-        <p>{{rating.title}}: {{rating.value}}</p>
-        {{#each text}}
-        <p>{{this}}</p>
-        {{/each}}
-        <p class='mb-0'><strong>{{advantages.title}}:</strong>
-        </p>
-        <p>{{advantages.text}}</p>
-        <p class='mb-0'><strong>{{disadvantages.title}}:</strong>
-        </p>
-        <p>{{disadvantages.text}}</p>
-        <div>
-          {{#each images}}
-          <img src='{{this}}' alt='' />
+        <div class='card-body'>
+          <p>{{seller.title}}: {{seller.value}}</p>
+          <p>{{rating.title}}: {{rating.value}}</p>
+            {{#each text}}
+              <p>{{this}}</p>
+            {{/each}}
+            <p class='mb-0'><strong>{{advantages.title}}:</strong></p>
+            <p>{{advantages.text}}</p>
+            <p class='mb-0'><strong>{{disadvantages.title}}:</strong></p>
+            <p>{{disadvantages.text}}</p>
+            <div>
+              {{#each images}}
+                <img src='{{this}}' alt='' />
+              {{/each}}
+            </div>
+          </div>
+        </div>
+        <div class="ms-5 ">
+          {{#each coments}}
+            <div class='card mt-3'>
+              <div class='card-body p-2'>
+                <h6>{{userName}}</h6>
+                <p class="mb-2">{{date}}</p>
+                <p>{{text}}</p>
+              </div>
+            </div>
           {{/each}}
         </div>
-      </div>
-    </div>
-    <div class="ms-5 ">
-      {{#each coments}}
-      <div class='card mt-3'>
-        <div class='card-body p-2'>
-          <h6>{{userName}}</h6>
-          <p class="mb-2">{{date}}</p>
-          <p>{{text}}</p>
-        </div>
-      </div>
-      {{/each}}
-    </div>
 
-    {{/with}}
+      {{/with}}
   </div>
 </div>
