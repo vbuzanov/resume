@@ -1,0 +1,24 @@
+<div class='card p-1 mb-3'>
+  <div class='card-body row align-items-center'>
+    <div class='col-2 '>
+      <img src='{{image}}' alt='{{name}}' />
+    </div>
+    <div class='col-4'>
+      <h6 class='card-title'>{{name}}</h6>
+      <p>{{description}}</p>
+    </div>
+    <div class='col-2'>
+      <p class=" mb-1">{{price.title}}:</p>
+      <p class='fw-semibold'>{{price.value}}:</p>
+    </div>
+    <div class='col-2'>
+      {{amount}}
+    </div>
+    <div class='col-2'>
+      {{#each buttons}}
+      <button
+        class='{{#unless @last}}mb-3{{/unless}} btn {{#if isPrimary}}btn-primary{{/if}} {{#if isDanger}}btn-outline-danger{{/if}}'>{{text}}</button>
+      {{/each}}
+    </div>
+  </div>
+</div>
