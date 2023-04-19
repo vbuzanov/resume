@@ -1,0 +1,69 @@
+<main class='p-2'>
+  <div class='row'>
+
+    {{#with header}}
+    <div class='col-12 my-5'>
+      <h1>{{title}}</h1>
+      <a href="{{button.link}}" class='btn btn-outline-secondary'>{{button.text}}</a>
+    </div>
+    {{/with}}
+
+    <hr>
+
+    <div class='col-12 my-5'>
+      {{#each goodsBlock}}
+      {{> cartGoodsItem image=image name=name description=description price=price amount=amount buttons=buttons }}
+      {{/each}}
+    </div>
+
+    <hr>
+
+    {{#with total}}
+    <div class='col-12 my-5'>
+      <h3>{{title}}</h3>
+      <div class="display-6 fw-semibold">{{amount}}</div>
+      <p>{{delivery}}</p>
+      {{#each buttons}}
+      <div>
+        <a href="{{link}}"
+          class=' mb-3 btn {{#if isSuccess}}btn-success{{/if}} {{#if isOutline}}btn-outline-success{{/if}}'>{{text}}</a>
+      </div>
+      {{/each}}
+
+    </div>
+    {{/with}}
+
+    <hr>
+    {{#with goodsOtherBlock}}
+    <div>
+      <h2 class="text-center mt-3">{{title}}</h2>
+    </div>
+
+    <div class='col-12 my-3'>
+      <div class="row">
+        {{#each cards}}
+        <div class="col-4 mb-3">
+
+          {{> shopcard image=image title=title description=description isHot=isHot idNew=idNew}}
+
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    {{/with}}
+
+    <hr>
+
+    {{#with subscribe}}
+    <div class='col-12 my-5 text-bg-dark'>
+
+      {{> shopaction title=header description=description buttons=buttons}}
+
+    </div>
+    {{/with}}
+
+  </div>
+
+
+</main>
+<hr>
