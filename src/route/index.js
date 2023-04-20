@@ -40,7 +40,116 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+    header: {
+      name: 'John Smith',
+      project: 'Resume project',
+    },
+    title: 'Page List',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam libero qui ipsam velit corrupti atque error delectus, quas consequuntur tempore ad amet voluptas. Ullam et voluptas doloremque excepturi expedita nostrum!',
+    pages: {
+      links: [
+        {
+          text: 'shopprofile',
+          href: '/shopprofile',
+        },
+        {
+          text: 'shopcart',
+          href: '/shopcart',
+        },
+        {
+          text: 'shopcatalog',
+          href: '/shopcatalog',
+        },
+        {
+          text: 'shophome',
+          href: '/shophome',
+        },
+        {
+          text: 'shopnews',
+          href: '/shopnews',
+        },
+        {
+          text: 'shoporder',
+          href: '/shoporder',
+        },
+        {
+          text: 'shopproduct',
+          href: '/shopproduct',
+        },
+        {
+          text: 'shopreview',
+          href: '/shopreview',
+        },
+        {
+          text: 'program',
+          href: '/program',
+        },
+        {
+          text: 'skills',
+          href: '/skills',
+        },
+        {
+          text: 'summary',
+          href: '/summary',
+        },
+        {
+          text: 'task21',
+          href: '/task21',
+        },
+        {
+          text: 'task22',
+          href: '/task22',
+        },
+        {
+          text: 'task31',
+          href: '/task31',
+        },
+        {
+          text: 'web',
+          href: '/web',
+        },
+        {
+          text: 'work',
+          href: '/work',
+        },
+        {
+          text: 'bio',
+          href: '/bio',
+        },
+        {
+          text: 'bootstrap',
+          href: '/bootstrap',
+        },
+        {
+          text: 'car',
+          href: '/car',
+        },
+        {
+          text: 'education',
+          href: '/education',
+        },
+        {
+          text: 'facebook',
+          href: '/facebook',
+        },
+        {
+          text: 'js',
+          href: '/js',
+        },
+        {
+          text: 'mac',
+          href: '/mac',
+        },
+        {
+          text: 'person',
+          href: '/person',
+        },
+      ],
+    },
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
