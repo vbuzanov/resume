@@ -1,14 +1,14 @@
-<div>
+<div class='p-2'>
     <main>
         <div>
-            <h1>{{make}} {{model}}</h1>
-            <br>
+            <h1 class="mb-5">{{make}} {{model}}</h1>
+
             <hr>
             <p>{{year}}, {{color}}</p>
-            <br>
+
             <div>
-                <h3>Features</h3>
-                <br>
+                <h3 class="my-5 ">Features</h3>
+
                 {{#with features}}
                 <div>
                     <h4>Interior</h4>
@@ -44,9 +44,9 @@
                             <li>
                                 color: <span class="badge rounded-pill text-bg-dark">{{color}}</span>
                             </li>
-                            <br>
+
                             {{#with display}}
-                            <h6>Display:</h6>
+                            <h6 class="mt-4">Display:</h6>
                             <ul>
                                 <li>
                                     type: <span class="badge rounded-pill text-bg-secondary">{{type}}</span>
@@ -91,8 +91,8 @@
                 </div>
                 {{/with}}
                 <hr>
-                <br>
-                <div>
+
+                <div class="mt-5">
                     <h4>Exterior</h4>
                     {{#with exterior}}
                     <section>
@@ -148,8 +148,8 @@
                     {{/with}}
                 </div>
                 <hr>
-                <br>
-                <div>
+
+                <div class="mt-5">
                     <h4>Safety</h4>
                     {{#with safety}}
                     <section>
@@ -205,11 +205,11 @@
                 {{/with}}
             </div>
             <hr>
-            <br>
+
             <div>
                 {{#with engine}}
-                <h3>Engine</h3>
-                <br>
+                <h3 class="my-5">Engine</h3>
+
                 <ul>
                     <li>
                         type: <span class="badge text-bg-primary">{{type}}</span>
@@ -242,10 +242,10 @@
                 {{/with}}
             </div>
             <hr>
-            <br>
+
             <div>
                 {{#with fuel_economy}}
-                <h3>Fuel_economy</h3>
+                <h3 class="my-5">Fuel_economy</h3>
                 <ul>
                     <li>
                         city: <span class="badge rounded-pill text-bg-light">{{city}}</span>
@@ -260,11 +260,11 @@
                 {{/with}}
             </div>
             <hr>
-            <br>
+
             <div>
                 {{#with price}}
-                <h3>Price</h3>
-                <br>
+                <h3 class="my-5">Price</h3>
+
                 <ul>
                     <li>
                         base: <span class="badge text-bg-primary">{{base}}</span>

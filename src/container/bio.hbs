@@ -1,127 +1,206 @@
-<div>
+<div class='p-2'>
     <main>
         <section>
             <h1>{{name}}</h1>
             <p>{{birthdate}} - {{deathdate}}</p>
-            <hr>
 
-            <address class="mt-5">Birthplace: {{birthplace}}</address>
+            <div class="card my-5">
+                <div class="card-body">
+                    <address>Birthplace: {{birthplace}}</address>
 
-            <address>Deathplace: {{deathplace}}</address>
-            <p>Nationality: {{nationality}}</p>
-            <p>Occupation: {{occupation}}</p>
-            <br>
-            {{> title data='Known for:' }}
-            <ul>
-                {{#each known_for}}
-                <li>
-                    <cite>
-                        {{this}}
-                    </cite>
-                </li>
-                {{/each}}
-            </ul>
-            <br>
-            <hr>
-            <h4>Education:</h4>
-            <ul>
-                {{#each education}}
-                <li>
-                    <strong>{{institution}}</strong>
-                    <p>year: {{year}}</p>
-                    <p>field: {{field}}</p>
-                    <p>degree: {{degree}}</p>
-                </li>
-                {{/each}}
-            </ul>
-            <br>
-            <hr>
-            <h4>Notable publications:</h4>
-            <ul>
-                {{#each notable_publications}}
-                <li>
-                    <cite>{{title}}</cite>
-                    <p>year: {{year}}</p>
-                    <p>publisher: {{publisher}}</p>
-                </li>
-                {{/each}}
-            </ul>
-            <br>
-            <hr>
-            <h4>Partners:</h4>
-            <ul>
-                {{#each partners}}
-                <li>
-                    <p><strong>{{name}}</strong>, {{relationship}}, {{years}}</p>
-                </li>
-                {{/each}}
-            </ul>
-            <br>
-            <hr>
-            <h4>Awards:</h4>
-            <ul>
-                {{#each awards}}
-                <li>
-                    <strong>{{title}}</strong>
-                    <p>year: {{year}}</p>
-                    <p>description: {{description}}</p>
-                </li>
-                {{/each}}
-            </ul>
-            <br>
-            <hr>
-            <h4>Influences:</h4>
-            <ul>
-                {{#each influences}}
-                <li>
-                    {{this}}
-                </li>
-                {{/each}}
-            </ul>
-            <br>
-            <hr>
-            <h4>Influenced:</h4>
-            <ul>
-                {{#each influenced}}
-                <li>
-                    {{this}}
-                </li>
-                {{/each}}
-            </ul>
-            <br>
-            <hr>
-            <h4>Quotes:</h4>
-            <ul>
-                {{#each quotes}}
-                <li>
-                    <q>{{this}}</q>
-                </li>
-                {{/each}}
-            </ul>
-            <br>
-            <hr>
-            <h4>Major discoveries:</h4>
-            <ul>
-                {{#each major_discoveries}}
-                <li>
-                    <cite>{{title}}</cite>
-                    <p>year: {{year}}</p>
-                    <p>description: {{description}}</p>
-                </li>
-                {{/each}}
-            </ul>
-            <br>
-            <hr>
-            <h4>Contributions:</h4>
-            {{#with contributions}}
-            <div>
-                <cite>{{title}}</cite>
-                <p>description: {{description}}</p>
-                <p>year: {{year}}</p>
-                <p>field: {{field}}</p>
+                    <address>Deathplace: {{deathplace}}</address>
+                    <p>Nationality: {{nationality}}</p>
+                    <p>Occupation: {{occupation}}</p>
 
+                    <div class="card my-5">
+                        <div class="card-header"> {{> title data='Known for:' }}</div>
+
+                        <div class="card-body">
+
+                            <ul>
+                                {{#each known_for}}
+                                <li>
+                                    <cite>
+                                        {{this}}
+                                    </cite>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
+
+            <div class="card my-5">
+                <div class="card-header">
+                    <h4>Education:</h4>
+                </div>
+
+                <div class="card-body">
+                    <ul>
+                        {{#each education}}
+                        <li>
+                            <strong>{{institution}}</strong>
+                            <p>year: {{year}}</p>
+                            <p>field: {{field}}</p>
+                            <p>degree: {{degree}}</p>
+                        </li>
+                        {{/each}}
+                    </ul>
+
+                </div>
+            </div>
+            <div class="card my-5">
+                <div class="card-header">
+                    <h4>Notable publications:</h4>
+                </div>
+
+                <div class="card-body">
+
+                    <ul>
+                        {{#each notable_publications}}
+                        <li>
+                            <cite>{{title}}</cite>
+                            <p>year: {{year}}</p>
+                            <p>publisher: {{publisher}}</p>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card my-5">
+                <div class="card-header">
+                    <h4>Partners:</h4>
+                </div>
+
+                <div class="card-body">
+
+                    <ul>
+                        {{#each partners}}
+                        <li>
+                            <p><strong>{{name}}</strong>, {{relationship}}, {{years}}</p>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="card my-5">
+                <div class="card-header">
+                    <h4>Awards:</h4>
+                </div>
+
+                <div class="card-body">
+
+                    <ul>
+                        {{#each awards}}
+                        <li>
+                            <strong>{{title}}</strong>
+                            <p>year: {{year}}</p>
+                            <p>description: {{description}}</p>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="card my-5">
+                <div class="card-header">
+                    <h4>Influences:</h4>
+                </div>
+
+                <div class="card-body">
+
+                    <ul>
+                        {{#each influences}}
+                        <li>
+                            {{this}}
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="card my-5">
+                <div class="card-header">
+                    <h4>Influenced:</h4>
+                </div>
+
+                <div class="card-body">
+
+                    <ul>
+                        {{#each influenced}}
+                        <li>
+                            {{this}}
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="card my-5">
+                <div class="card-header">
+                    <h4>Quotes:</h4>
+                </div>
+
+                <div class="card-body">
+
+                    <ul>
+                        {{#each quotes}}
+                        <li>
+                            <q>{{this}}</q>
+                        </li>
+                        {{/each}}
+                    </ul>
+
+                </div>
+            </div>
+
+
+            <div class="card my-5">
+                <div class="card-header">
+                    <h4>Major discoveries:</h4>
+                </div>
+
+                <div class="card-body">
+
+                    <ul>
+                        {{#each major_discoveries}}
+                        <li>
+                            <cite>{{title}}</cite>
+                            <p>year: {{year}}</p>
+                            <p>description: {{description}}</p>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="card my-5">
+                <div class="card-header">
+                    <h4>Contributions:</h4>
+                </div>
+
+                <div class="card-body">
+
+                    {{#with contributions}}
+                    <div>
+                        <cite>{{title}}</cite>
+                        <p>description: {{description}}</p>
+                        <p>year: {{year}}</p>
+                        <p>field: {{field}}</p>
+
+                    </div>
+                </div>
+            </div>
 
             {{/with}}
         </section>

@@ -1,4 +1,4 @@
-<div>
+<div class='p-2'>
     <main>
         {{#with program}}
         <div>
@@ -13,6 +13,10 @@
                 {{>title data='Programs:'}}
                 <ul>
                     {{#each program}}
+                    <div class="card p-2 mb-3">
+                        <div class="card-body ">
+
+                       
                     <li>
                         <h4>{{name}}</h4>
                         <p>type: {{type}}</p>
@@ -76,8 +80,9 @@
                             {{/with}}
                         </section>
                         {{/with}}
-                    </li>
-                    <hr>
+                    </li>                
+                     </div>
+                    </div>
                     {{/each}}
                 </ul>
                 <br>
